@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-        <title>Module 1 Template</title>
+        <title>AR Camera</title>
         <!-- jQuery -->
         <script
             src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -43,8 +43,13 @@
         </div>
         <!-- HUD -->
         <div class="hud normal" id="markerState">
-            Point the camera to a marker.
+            Point the camera to a building.
         </div>
+        <div class="btn-group">
+            <button>Quiz</button>
+            <button>Read</button>
+            <button>Interactive Map</button>
+          </div>
         <!-- AR.js core -->
         <a-scene embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
             
