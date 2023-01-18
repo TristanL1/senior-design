@@ -28,14 +28,18 @@
     align-items: center;
 }
 
-.btn-group button {
-    bottom: 0;
+button {
     position: relative;
-    z-index: 999;
+}
+
+.btn-group {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
     background-color: #04AA6D; /* Green background */
     border: 1px solid green; /* Green border */
     color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
+
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
 }
