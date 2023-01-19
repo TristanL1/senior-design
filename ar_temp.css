@@ -33,9 +33,12 @@ button {
 }
 
 .btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
     bottom: 0;
     width: 100%;
-    position: absolute;
     background-color: #04AA6D; /* Green background */
     border: 1px solid green; /* Green border */
     color: white; /* White text */
@@ -44,6 +47,10 @@ button {
     float: left; /* Float the buttons side by side */
 }
   
+.btn-group{
+    display: flex;
+    flex-direction: column;
+}
 /* Clear floats (clearfix hack) */
 .btn-group:after {
     content: "";

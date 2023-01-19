@@ -45,21 +45,24 @@
         <div class="hud normal" id="markerState">
             Point the camera to a building.
         </div>
-        <div class="btn-group">
-            <button style="width:33.1%">Quiz</button>
-            <button style="width:33.1%">Read</button>
-            <button style="width:33.2%">Interactive Map</button>
-        </div>
         
-        <!-- AR.js core -->
-        <a-scene embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
-            
-            <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
-            <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
-            <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Hayden Library"></a-nft>
-            <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="ASU Gammage"></a-nft>
-            <a-entity camera rotation-reader></a-entity> 
+        <div class="main-page">
+            <!-- AR.js core -->
+            <a-scene embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
 
-        </a-scene>
+                <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
+                <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
+                <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Hayden Library"></a-nft>
+                <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="ASU Gammage"></a-nft>
+                <a-entity camera rotation-reader></a-entity> 
+
+            </a-scene>
+
+            <div class="btn-group">
+                <button style="width:33.1%">Quiz</button>
+                <button style="width:33.1%">Read</button>
+                <button style="width:33.2%">Interactive Map</button>
+            </div>
+        </div>
     </body>
 </html>
