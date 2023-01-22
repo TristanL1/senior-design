@@ -7,14 +7,18 @@
 <link rel = "stylesheet" href = "map.css">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
-<script src = "map.js"></script>
 <style>
 body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+#map { position: absolute ;top: 0; bottom: 0; width: 100%; }
 </style>
 </head>
 <body>
 <div id="map"></div>
+<div class="popup">
+    <button id="close">&times;</button>
+    <h2>This is the title</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque ipsa quisquam obcaecati. Laborum at dolores ullam, quod saepe voluptates error.</p>
+</div>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYWxmcmVkbzExMTQiLCJhIjoiY2xkNnY3c3EyMHFnODNwcXM3cWhidmtteCJ9.XGod56pNqJJ9KbjtEyLUEA';
     const map = new mapboxgl.Map({
@@ -25,6 +29,6 @@ body { margin: 0; padding: 0; }
         zoom: 9 // starting zoom
     });
 </script>
-
+<script src = "map.js"></script>
 </body>
 </html>
