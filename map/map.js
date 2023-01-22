@@ -7,3 +7,7 @@ window.onload = function open(event){
         myElement.style.display = "none";    
     });
 };
+
+
+//Add map markers below
+
