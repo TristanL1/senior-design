@@ -32,14 +32,16 @@ button {
     position: relative;
 }
 
+.btn-group{
+    position: absolute;
+    bottom:10%;
+    width: 100%;
+}
 
 .btn-group {
-    bottom: 0;
-    width: 100%;
     background-color: #04AA6D; /* Green background */
     border: 1px solid green; /* Green border */
     color: white; /* White text */
-    position: relative;
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
 }
