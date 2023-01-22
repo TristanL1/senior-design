@@ -1,5 +1,4 @@
 .arjs-loader {
-    display: flex;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -44,13 +43,6 @@ button {
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
 }
-
-
-.main-page{
-    display: flex;
-    flex-direction: column;
-}
-
 
 
 /* Clear floats (clearfix hack) */
