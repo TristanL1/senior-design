@@ -45,7 +45,12 @@
             <div class="hud normal" id="markerState">
                 Point the camera to a building.
             </div>
-        
+            
+            <div class="btn-group">
+                <button style="width:33.1%">Quiz</button>
+                <button style="width:33.1%">Read</button>
+                <button style="width:33.2%">Interactive Map</button>
+            </div>
             <!-- AR.js core -->
             <a-scene embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
 
@@ -56,12 +61,6 @@
                 <a-entity camera rotation-reader></a-entity> 
 
             </a-scene>
-
-            <div class="btn-group">
-                <button style="width:33.1%">Quiz</button>
-                <button style="width:33.1%">Read</button>
-                <button style="width:33.2%">Interactive Map</button>
-            </div>
         </div>
     </body>
 </html>
