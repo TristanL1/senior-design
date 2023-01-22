@@ -39,7 +39,7 @@ button {
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-    bottom: 0;
+    bottom: 30;
     width: 100%;
     background-color: #04AA6D; /* Green background */
     border: 1px solid green; /* Green border */
@@ -53,15 +53,10 @@ button {
 .main-page{
     display: flex;
     flex-direction: column;
-    
 }
 
-.btn-group{
-    display: flex;
-    flex: 1;
-    align-self: flex-end;
-    flex-direction: row;
-}
+
+
 /* Clear floats (clearfix hack) */
 .btn-group:after {
     content: "";
