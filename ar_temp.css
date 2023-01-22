@@ -1,3 +1,7 @@
+* {
+    font-family: Helvetica;
+}
+
 .arjs-loader {
     height: 100%;
     width: 100%;
@@ -26,25 +30,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-button {
-    position: relative;
-}
-
-
-.btn-group{
-    position: absolute;
-    bottom:0%;
-    width: 100%;
+    font-weight: bold;
 }
 
 .btn-group {
-    background-color: #04AA6D; /* Green background */
-    border: 1px solid green; /* Green border */
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+
+    background: linear-gradient(to bottom right, #862633, #eb0849);
     color: white; /* White text */
     cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
+}
+
+.btn-group button {
+    width: 32%;
+    border-radius: 10px;
 }
 
 /*
@@ -66,11 +75,11 @@ button {
 }
 */
 
-.indv-buttons{
+/* .indv-buttons{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
+} */
 
 
 
