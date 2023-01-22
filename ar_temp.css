@@ -47,7 +47,9 @@ button {
     float: left; /* Float the buttons side by side */
 }
 
-/* Clear floats (clearfix hack) */
+/*
+
+ Clear floats (clearfix hack) 
 .btn-group:after {
     content: "";
     clear: both;
@@ -55,13 +57,14 @@ button {
 }
   
 .btn-group button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
+    border-right: none; /* Prevent double borders 
 }
   
-/* Add a background color on hover */
+/* Add a background color on hover 
 .btn-group button:hover {
     background-color: #3e8e41;
 }
+*/
 
 .indv-buttons{
     display: flex;
