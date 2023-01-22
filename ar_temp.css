@@ -1,4 +1,5 @@
 .arjs-loader {
+    display: flex;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -27,10 +28,11 @@
     justify-content: center;
     align-items: center;
 }
-
+/*
 button {
     position: relative;
 }
+*/
 
 .btn-group {
     display: flex;
@@ -46,10 +48,19 @@ button {
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
 }
-  
-.btn-group{
+
+
+.main-page{
     display: flex;
     flex-direction: column;
+    
+}
+
+.btn-group{
+    display: flex;
+    flex: 1;
+    align-self: flex-end;
+    flex-direction: row;
 }
 /* Clear floats (clearfix hack) */
 .btn-group:after {
