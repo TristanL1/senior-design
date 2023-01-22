@@ -4,6 +4,6 @@ window.onload = function open(event){
         const hideButton = document.querySelector("#close");
         const myElement = document.querySelector(".popup")
     hideButton.addEventListener("click", function() {
-        myElement.style.display = "none";
+        myElement.style.display = "none";    
     });
 };
