@@ -42,7 +42,7 @@
     position: absolute;
     bottom: 0%;
     left: 0%;
-    width: 100%;
+    width: 100vw;
     padding-top: 1.5px;
     padding-bottom: 1.5px;
 
@@ -52,7 +52,7 @@
 }
 
 .btn-group button {
-    width: 32%;
+    width: 30%;
     border-radius: 10px;
 }
 
