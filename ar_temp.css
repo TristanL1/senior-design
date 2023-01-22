@@ -32,9 +32,10 @@ button {
     position: relative;
 }
 
+
 .btn-group{
     position: absolute;
-    bottom:10%;
+    bottom:0%;
     width: 100%;
 }
 
@@ -45,7 +46,6 @@ button {
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
 }
-
 
 /* Clear floats (clearfix hack) */
 .btn-group:after {
@@ -62,6 +62,14 @@ button {
 .btn-group button:hover {
     background-color: #3e8e41;
 }
+
+.indv-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
 
 .info-pane {
     position: absolute;
