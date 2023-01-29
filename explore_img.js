@@ -34,10 +34,10 @@ function initImgMarkers() {
         info.disabled = false;
 
         quiz.onclick = function () {
-            "window.location.href='villasquiz.html'";
+            window.location.href="villasquiz.html";
         };
         info.onclick = function () { 
-            "window.location.href='villasinfo.html'";
+            window.location.href="villasinfo.html";
         };
     });
     document.addEventListener("markerLost", (e) => {
