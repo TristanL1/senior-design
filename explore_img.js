@@ -40,7 +40,7 @@ function initImgMarkers() {
             info.onclick = function () { 
                 window.location.href="mouseinfo.html";
             };
-            }
+        }
     });
     document.addEventListener("markerLost", (e) => {
         // Hide the info pane
