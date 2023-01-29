@@ -27,9 +27,21 @@ function initImgMarkers() {
     document.addEventListener("markerFound", (e) => {
         // Show the info pane
         updateTrackingInfo(e.target.getAttribute("data-info-pane"), e.target.getAttribute("data-marker-name"), true);
+        var quiz = document.getElementById("quiz");
+        var info = document.getElementById("info");
+        
+        quiz.disabled = false;
+        info.disabled = false;
+
+        quiz.onclick = "window.location.href='villasquiz.html'";
+        info.onclick = "window.location.href='villasinfo.html'";
     });
     document.addEventListener("markerLost", (e) => {
         // Hide the info pane
         updateTrackingInfo(e.target.getAttribute("data-info-pane"), e.target.getAttribute("data-marker-name"), false);
+        var quiz = document.getElementById("quiz");
+        var info = document.getElementById("info");
+        quiz.disabled = true;
+        info.disabled = true;
     });
 }

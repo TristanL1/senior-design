@@ -17,27 +17,6 @@
         <link rel="stylesheet" href="ar_temp.css" />
         <script src="utils.js"></script>
         <script src="explore_img.js"></script>
-
-        <script>
-            var nft = document.querySelector("a-nft");
-            nft.addEventListener("markerFound", function() {
-                var quiz = document.getElementById("quiz");
-                var info = document.getElementById("info");
-                
-                quiz.disabled = false;
-                info.disabled = false;
-
-                quiz.onclick = "window.location.href='villasquiz.html'";
-                info.onclick = "window.location.href='villasinfo.html'";
-            })
-
-            nft.addEventListener("markerLost", function() {
-                var quiz = document.getElementById("quiz");
-                var info = document.getElementById("info");
-                quiz.disabled = true;
-                info.disabled = true;
-            })
-        </script>
     </head>
 
     <body style="overflow: hidden; margin: 0%; padding: 0%;">
@@ -84,9 +63,9 @@
             <a-scene embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
 
                 <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
-                <a-nft emitevents="true" type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
-                <a-nft emitevents="true" type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Hayden Library"></a-nft>
-                <a-nft emitevents="true" type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="ASU Gammage"></a-nft>
+                <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
+                <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Hayden Library"></a-nft>
+                <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="ASU Gammage"></a-nft>
                 <a-entity camera rotation-reader></a-entity> 
 
             </a-scene>
