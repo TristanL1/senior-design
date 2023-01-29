@@ -17,6 +17,27 @@
         <link rel="stylesheet" href="ar_temp.css" />
         <script src="utils.js"></script>
         <script src="explore_img.js"></script>
+
+        <script>
+            var nft = document.querySelector("a-nft");
+            nft.addEventListener("markerFound", (e) => {
+                var quiz = document.getElementById("quiz");
+                var info = document.getElementById("info");
+                
+                quiz.disabled = false;
+                info.disabled = false;
+
+                quiz.onclick = "window.location.href='villasquiz.html'";
+                info.onclick = "window.location.href='villasinfo.html'";
+            })
+
+            nft.addEventListener("markerLost", (e)=> {
+                var quiz = document.getElementById("quiz");
+                var info = document.getElementById("info");
+                quiz.disabled = true;
+                info.disabled = true;
+            })
+        </script>
     </head>
 
     <body style="overflow: hidden; margin: 0%; padding: 0%;">
@@ -25,7 +46,7 @@
         <!-- Fill in the content BELOW this line -->
 
         <div id="nft-marker1-info" class="info-pane" >
-            <h1>Fill in some info about this building.</h1>
+            <h1>This is building 3 at SCU's University Villas.</h1>
         </div>
         <div id="nft-marker2-info" class="info-pane">
             <h1>Fill in some info about this location.</h1>
@@ -48,13 +69,13 @@
             </div>
 
             <div class="btn-group">
-                    <button onclick="window.location.href='quiz.html'">
+                    <button id="quiz" disabled="disabled">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
                     </button>
-                    <button>
+                    <button id="info" disabled="disabled">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                     </button>
-                    <button onclick = "window.location.href ='map.html'" >
+                    <button id="map" onclick = "window.location.href ='map.html'" disabled="enabled">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
                     </button>
             </div>
