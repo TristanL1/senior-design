@@ -20,7 +20,7 @@
 
         <script>
             var nft = document.querySelector("a-nft");
-            nft.addEventListener("markerFound", (e) => {
+            nft.addEventListener("markerFound", function() {
                 var quiz = document.getElementById("quiz");
                 var info = document.getElementById("info");
                 
@@ -31,7 +31,7 @@
                 info.onclick = "window.location.href='villasinfo.html'";
             })
 
-            nft.addEventListener("markerLost", (e)=> {
+            nft.addEventListener("markerLost", function() {
                 var quiz = document.getElementById("quiz");
                 var info = document.getElementById("info");
                 quiz.disabled = true;
@@ -69,10 +69,10 @@
             </div>
 
             <div class="btn-group">
-                    <button id="quiz" disabled="disabled">
+                    <button id="quiz" disabled>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
                     </button>
-                    <button id="info" disabled="disabled">
+                    <button id="info" disabled>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                     </button>
                     <button id="map" onclick = "window.location.href ='map.html'">
