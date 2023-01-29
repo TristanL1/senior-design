@@ -33,12 +33,14 @@ function initImgMarkers() {
         quiz.disabled = false;
         info.disabled = false;
 
-        quiz.onclick = function () {
-            window.location.href="villasquiz.html";
-        };
-        info.onclick = function () { 
-            window.location.href="villasinfo.html";
-        };
+        if (e.target.getAttribute("id") == "nft-marker2") {
+            quiz.onclick = function () {
+                window.location.href="mousequiz.html";
+            };
+            info.onclick = function () { 
+                window.location.href="mouseinfo.html";
+            };
+            }
     });
     document.addEventListener("markerLost", (e) => {
         // Hide the info pane
