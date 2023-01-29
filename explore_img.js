@@ -33,8 +33,12 @@ function initImgMarkers() {
         quiz.disabled = false;
         info.disabled = false;
 
-        quiz.onclick = "window.location.href='villasquiz.html'";
-        info.onclick = "window.location.href='villasinfo.html'";
+        quiz.onclick = function () {
+            "window.location.href='villasquiz.html'";
+        };
+        info.onclick = function () { 
+            "window.location.href='villasinfo.html'";
+        };
     });
     document.addEventListener("markerLost", (e) => {
         // Hide the info pane
