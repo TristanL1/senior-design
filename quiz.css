@@ -1,0 +1,17 @@
+.ans-button-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ans-button{
+    display: flex;
+    
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
