@@ -22,9 +22,12 @@
         <link rel = "stylesheet" href = "quiz.css">
     </head>
     <body>
+        <div class="title-container">
+            <h1>Fun Fact Quiz!</h1>
+            <h2>Ask a certain question about Santa Clara University here?</h2>
+        </div>
+<!----
         <div class = "ans-button-group">
-            <h1 id = "title">Fun Fact Quiz!</h1>
-                <h2>Ask a certain question about Santa Clara University here?</h2>
                 <div class = "ans-button">
                     <label><input type="radio" id="a1" name="q1" value="A" /><span>Wrong answer choice 1</span></label>
                 </div>
@@ -37,26 +40,22 @@
                 <div class = "ans-button">
                     <label><input type="radio" id="a4" name="q1" value="D" /><span>Wrong answer choice 3 </span></label>
                 </div>
+                <button onclick="check()">Check</button>
             </div>
-        <div>
-            <button onclick="check()">Check</button>
+-->
+        <div class="button-container">
+            <button class="button" id = "a1" onclick="wrong();">Wrong answer choice 1</button>
+            <button class="button" id = "a2" onclick="wrong();">Wrong answer choice 2</button>                <button class="button" id = "a3" onclick="correct();">Correct answer choice</button>
+            <button class="button" id = "a4" onclick="wrong();">Wrong answer choice 3</button>
         </div>
+
+
         <div>
             <p id="results"></p>
         </div>
 
-        <script>
-            function toggleButton(button) {
-                // remove the "pressed" class from all buttons
-                var buttons = document.getElementsByClassName("wide-button");
-                for (var i = 0; i < buttons.length; i++) {
-                  buttons[i].classList.remove("pressed");
-                }
-              
-                // add the "pressed" class to the clicked button
-                button.classList.add("pressed");
-              }
-              
-        </script>
+        
     </body>
 </html>
+
+
