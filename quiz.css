@@ -16,6 +16,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
     gap: 20px;
     background-color: #b30738;
     margin: 0;
