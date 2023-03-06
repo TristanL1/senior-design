@@ -19,29 +19,44 @@
                     wrong();
             }
         </script>
+        <link rel = "stylesheet" href = "quiz.css">
     </head>
     <body>
-        <h1>Fun Fact Quiz (Mouse)!</h1>
-        <div>
+        <div class="title-container">
+            <h1>Fun Fact Quiz (Mouse Test)!</h1>
             <h2>Ask a certain question about Santa Clara University here?</h2>
-            <div>
-                <label><input type="radio" id="a1" name="q1" value="A" /><span>Wrong answer choice 1</span></label>
-            </div>
-            <div>
-                <label><input type="radio" id="a2" name="q1" value="B" /><span>Wrong answer choice 2</span></label>
-            </div>
-            <div>
-                <label><input type="radio" id="a3" name="q1" value="C" /><span>Correct answer choice</span></label>
-            </div>
-            <div>
-                <label><input type="radio" id="a4" name="q1" value="D" /><span>Wrong answer choice 3 </span></label>
-            </div>
         </div>
-        <div>
-            <button onclick="check()">Check</button>
+<!----
+        <div class = "ans-button-group">
+                <div class = "ans-button">
+                    <label><input type="radio" id="a1" name="q1" value="A" /><span>Wrong answer choice 1</span></label>
+                </div>
+                <div class= "ans-button">
+                    <label><input type="radio" id="a2" name="q1" value="B" /><span>Wrong answer choice 2</span></label>
+                </div>
+                <div class = "ans-button">
+                    <label><input type="radio" id="a3" name="q1" value="C" /><span>Correct answer choice</span></label>
+                </div>
+                <div class = "ans-button">
+                    <label><input type="radio" id="a4" name="q1" value="D" /><span>Wrong answer choice 3 </span></label>
+                </div>
+                <button onclick="check()">Check</button>
+            </div>
+-->
+        <div class="button-container">
+            <button class="button" id = "a1" onclick="wrong();">Wrong answer choice 1</button>
+            <button class="button" id = "a2" onclick="wrong();">Wrong answer choice 2</button>                
+            <button class="button" id = "a3" onclick="correct();">Correct answer choice</button>
+            <button class="button" id = "a4" onclick="wrong();">Wrong answer choice 3</button>
         </div>
+
+
         <div>
             <p id="results"></p>
         </div>
+
+        
     </body>
 </html>
+
+
