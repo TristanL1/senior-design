@@ -1,15 +1,27 @@
 <!DOCTYPE html>
     <head>
         <script>
+    
             function correct() {
                 var text = document.getElementById("results");
+                var image = document.getElementById("correct-image");
+                
                 text.style.color = "green";
-                text.innerHTML = "Your answer was correct! Insert explanation here.";
+                text.style.textAlign = "center"; // Center the text
+                text.innerHTML = "Steve Nash";
+                
+                image.src = "https://www.scu.edu/media/institutional-pages/news-amp-events/Believe-760x480.jpg"; // Set the image source
+                image.style.display = "block"; // Display the image
+                image.style.marginLeft = "auto"; // Center the image
+                image.style.marginRight = "auto";
             }
+
             function wrong() {
                 var text = document.getElementById("results");
                 text.style.color = "red";
+                text.style.textAlign = "center"; 
                 text.innerHTML = "Your answer was wrong! Insert explanation here."
+
             }
             function check() {
                 var ans = document.getElementById("a3");
@@ -19,12 +31,12 @@
                     wrong();
             }
         </script>
-        <link rel = "stylesheet" href = "quiz.css">
+        <link rel = "stylesheet" href = "leaveyQuiz.css">
     </head>
     <body>
         <div class="title-container">
-            <h1>Fun Fact Quiz!</h1>
-            <h2>Ask a certain question about Santa Clara University here?</h2>
+            <h1>Malley Center Fun Fact Quiz!</h1>
+            <h2>Which NBA MVP is an alumni of SCU?</h2>
         </div>
 <!----
         <div class = "ans-button-group">
@@ -44,15 +56,18 @@
             </div>
 -->
         <div class="button-container">
-            <button class="button" id = "a1" onclick="wrong();">Wrong answer choice 1</button>
-            <button class="button" id = "a2" onclick="wrong();">Wrong answer choice 2</button>                
-            <button class="button" id = "a3" onclick="correct();">Correct answer choice</button>
-            <button class="button" id = "a4" onclick="wrong();">Wrong answer choice 3</button>
+            <button class="button" id = "a1" onclick="wrong();">A. Kawhi Leonard</button>
+            <button class="button" id = "a2" onclick="wrong();">B.  Stephen Curry</button>                
+            <button class="button" id = "a3" onclick="correct();">C. Steve Nash </button>
+            <button class="button" id = "a4" onclick="wrong();">D. Jason Kidd </button>
         </div>
 
 
         <div>
-            <p id="results"></p>
+            <div>
+                <p id="results"></p>
+                <img id="correct-image" src="" alt="" style="display: none;">
+            </div>
         </div>
 
         
