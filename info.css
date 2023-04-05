@@ -1,0 +1,47 @@
+* {
+    font-family: Helvetica;
+}
+
+body {
+    margin: 0;
+}
+
+.backHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    background: linear-gradient(to bottom right, #862633, #eb0849);
+    color: white; /* White text */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.backHome h1 {
+    text-align: center;
+}
+
+.backHome button {
+    position: absolute;
+    left: 1%;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+}
+
+.backHome button svg {
+    width: 30px;
+    height: 30px;
+}
+
+.infoText {
+    margin: 1rem;
+}
