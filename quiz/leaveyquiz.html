@@ -5,12 +5,12 @@
             function correct() {
                 var text = document.getElementById("results");
                 text.style.color = "green";
-                text.innerHTML = "Your answer was correct! Insert explanation here.";
+                text.innerHTML = "Your answer was correct! As a freshman in 1992 Steve Nash made an immediate impact on the court. He helped the Broncos earn a spot in the NCAA Tournament and led them to a first round upset of the fifth ranked Arizona Wildcats. With Nash at guard the Broncos advanced to the NCAA Tournament three out of his fours seasons. During various points in his career, Nash led the league in assists and free-throw percentage. He is also ranked as one of the top players in NBA league history in three-point shooting, free-throw shooting, total assists, and assists per game. His No.11 jersey was retired by Santa Clara University.";
             }
             function wrong() {
                 var text = document.getElementById("results");
                 text.style.color = "red";
-                text.innerHTML = "Your answer was wrong! Insert explanation here."
+                text.innerHTML = "Not quite, try again!"
             }
             function check() {
                 var ans = document.getElementById("a3");
@@ -25,15 +25,15 @@
     </head>
     <body>
         <div class="title-container">
-            <h1>Fun Fact Quiz (Mouse Test)!</h1>
-            <h2>Ask a certain question about Santa Clara University here?</h2>
+            <h1>Leavey Center Fun Fact Quiz</h1>
+            <h2>Which NBA MVP is an alumni of SCU?</h2>
         </div>
 
         <div class="button-container">
-            <button class="button" id = "a1" onclick="wrong();">Wrong answer choice 1</button>
-            <button class="button" id = "a2" onclick="wrong();">Wrong answer choice 2</button>                
-            <button class="button" id = "a3" onclick="correct();">Correct answer choice</button>
-            <button class="button" id = "a4" onclick="wrong();">Wrong answer choice 3</button>
+            <button class="button" id = "a1" onclick="wrong();">Kawhi Leonard</button>
+            <button class="button" id = "a2" onclick="wrong();">Stephen Curry</button>                
+            <button class="button" id = "a3" onclick="correct();">Steve Nash</button>
+            <button class="button" id = "a4" onclick="wrong();">Jason Kidd</button>
         </div>
 
 
