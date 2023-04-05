@@ -1,19 +1,63 @@
 <!DOCTYPE html>
     <head>
         <script>
-    
+            var flag = 0; 
+            function assignFunctionsToButtons(correctIndex) {
+                for (var i = 1; i <= 4; i++) {
+                    var button = document.getElementById("a" + i);
+                    if (i === correctIndex) {
+                        button.onclick = correct;
+                    } else {
+                        button.onclick = wrong;
+                    }
+                }
+            }
+            
+            function disableButtons(disable) {
+                var buttons = document.getElementsByClassName("button");
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].disabled = disable;
+                }
+            }
+            
             function correct() {
-                var text = document.getElementById("results");
-                var image = document.getElementById("correct-image");
-                
-                text.style.color = "green";
-                text.style.textAlign = "center"; // Center the text
-                text.innerHTML = "Steve Nash";
-                
-                image.src = "https://www.scu.edu/media/institutional-pages/news-amp-events/Believe-760x480.jpg"; // Set the image source
-                image.style.display = "block"; // Display the image
-                image.style.marginLeft = "auto"; // Center the image
-                image.style.marginRight = "auto";
+                if(flag == 0){ //Question 1
+                    var text = document.getElementById("results");
+                    var image = document.getElementById("correct-image");
+                    
+                    text.style.color = "green";
+                    text.style.textAlign = "center"; // Center the text
+                    text.innerHTML = "Steve Nash";
+                    
+                    image.src = "https://www.scu.edu/media/institutional-pages/news-amp-events/Believe-760x480.jpg"; // Set the image source
+                    image.style.display = "block"; // Display the image
+                    image.style.marginLeft = "auto"; // Center the image
+                    image.style.marginRight = "auto";
+                    disableButtons(true);
+                    var nextButton = document.getElementById("next-question");
+                    nextButton.style.display = "block";
+                    flag = 1;
+                }
+                else{ //Question 2
+                    var text = document.getElementById("results");
+                    var image = document.getElementById("correct-image");
+                    
+                    text.style.color = "green";
+                    text.style.textAlign = "center"; // Center the text
+                    text.innerHTML = "Final Four";
+                    
+                    image.src = "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/2021_NCAA_Men%27s_Final_Four_logo.svg/1200px-2021_NCAA_Men%27s_Final_Four_logo.svg.png"; // Set the image source
+                    image.width = 760;
+                    image.height = 760;
+                    image.style.display = "block"; // Display the image
+                    image.style.marginLeft = "auto"; 
+                    image.style.marginRight = "auto";
+
+                    disableButtons(true);
+                    var nextButton = document.getElementById("next-question");
+                    nextButton.style.display = "block";
+                    flag = 0;
+                }
             }
 
             function wrong() {
@@ -29,7 +73,30 @@
                     correct();
                 else
                     wrong();
-            }
+                }
+            function nextQuestion() {
+                assignFunctionsToButtons(4);
+
+                // Update the question and answer choices
+                document.querySelector('.title-container h2').innerText = "What is the furthest SCU has gotten to in the NCAA Tournament?";
+                document.getElementById("a1").innerText = "A. First Four";
+                document.getElementById("a2").innerText = "B. Sweet 16";
+                document.getElementById("a3").innerText = "C. Elite Eight";
+                document.getElementById("a4").innerText = "D. Final Four";
+
+                //document.getElementById("a3").onclick = "wrong ();";
+                
+                // Hide the "Next Question" button and the image
+                document.getElementById("next-question").style.display = "none";
+                document.getElementById("correct-image").style.display = "none";
+                
+                // Clear the results text
+                document.getElementById("results").innerText = "";
+                
+                // Enable all buttons
+                disableButtons(false);
+                }
+                
         </script>
         <link rel = "stylesheet" href = "leaveyQuiz.css">
     </head>
@@ -67,6 +134,9 @@
             <div>
                 <p id="results"></p>
                 <img id="correct-image" src="" alt="" style="display: none;">
+                <p id="results2"></p>
+                <img id="correct-image2" src="" alt="" style="display: none;">
+                <button id="next-question" onclick="nextQuestion();" style="display: none;">Next Question</button>
             </div>
         </div>
 
