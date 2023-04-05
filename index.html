@@ -4,10 +4,46 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SCU's AR Interactive Tour</title>
+        <style>
+            h1, html, body {
+                margin: 0;
+                padding: 0;
+            }
+
+            button {
+                background-color: #b30738;
+                color: white;
+                padding: 16px 50px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            button:hover {
+                background-color: #A00934;
+            }
+
+            #header {
+                background-color: #b30738;
+                color: white;
+                text-align: center;
+                padding: 25px;
+            }
+
+            #text {
+                padding: 15px;
+            }
+
+            #go {
+                display: flex;
+                justify-content: center;
+            }
+        </style>
     </head>
     <body>
-        <h1>Welcome to Santa Clara University's AR Interactive Tour Web Application!</h1>
-        <div>
+        <div id="header">
+            <h1>Welcome to Santa Clara University's AR Interactive Tour Web Application!</h1>
+        </div>
+        <div id="text">
             <h2>A little bit about our application: </h2>
             <ul>
                 <li>
@@ -29,7 +65,10 @@
                     to access to your camera and location
                 </li>
             </ul>
-            <button onclick="window.location.href='explore_img.html'">Go</button>
+        </div>
+
+        <div id="go">
+            <button onclick="window.location.href='explore_img.html'">Start</button>
         </div>
     </body>
 </html>
