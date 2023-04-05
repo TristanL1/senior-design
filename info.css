@@ -24,7 +24,7 @@ body {
 
 .backHome button {
     position: absolute;
-    left: 1%;
+    left: 12px;
 
     display: inline-flex;
     justify-content: center;
