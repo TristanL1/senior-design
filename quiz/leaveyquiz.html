@@ -4,8 +4,13 @@
         <script>
             function correct() {
                 var text = document.getElementById("results");
+                var image = document.getElementById("correct-image");
                 text.style.color = "green";
                 text.innerHTML = "Your answer was correct! As a freshman in 1992 Steve Nash made an immediate impact on the court. He helped the Broncos earn a spot in the NCAA Tournament and led them to a first round upset of the fifth ranked Arizona Wildcats. With Nash at guard the Broncos advanced to the NCAA Tournament three out of his fours seasons. During various points in his career, Nash led the league in assists and free-throw percentage. He is also ranked as one of the top players in NBA league history in three-point shooting, free-throw shooting, total assists, and assists per game. His No.11 jersey was retired by Santa Clara University.";
+                image.src = "https://www.scu.edu/media/institutional-pages/news-amp-events/Believe-760x480.jpg"; // Set the image source
+                image.style.display = "block"; // Display the image
+                image.style.marginLeft = "auto"; // Center the image
+                image.style.marginRight = "auto";
             }
             function wrong() {
                 var text = document.getElementById("results");
@@ -39,6 +44,7 @@
 
         <div>
             <p id="results"></p>
+            <img id="correct-image" src="" alt="" style="display: none;">
         </div>
 
         <div class="btn-group">
