@@ -40,6 +40,13 @@ function initImgMarkers() {
             info.onclick = function () { 
                 window.location.href="mouseinfo.html";
             };
+        } else if (e.target.getAttribute("id") == "nft-marker3") {
+            quiz.onclick = function () {
+                window.location.href="leaveyquiz.html";
+            };
+            info.onclick = function () { 
+                window.location.href="leaveyinfo.html";
+            };
         }
     });
     document.addEventListener("markerLost", (e) => {
