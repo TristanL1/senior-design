@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Santa Clara Map</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link rel = "stylesheet" href = "map.css">
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
-<style>
-body { margin: 0; padding: 0; }
-#map { position: absolute ;top: 0; bottom: 0; width: 100%; }
-</style>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Santa Clara Map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel = "stylesheet" href = "map.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
+    <style>
+      body { margin: 0; padding: 0; }
+      #map { position: absolute ;top: 0; bottom: 0; width: 100%; }
+    </style>
+  </head>
 <body>
 <div id="map"></div>
 <div class="popup">
     <button id="close">&times;</button>
-    <h2>This is the title</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque ipsa quisquam obcaecati. Laborum at dolores ullam, quod saepe voluptates error.</p>
+    <h2>Santa Clara University Map</h2>
+    <p>To find yourself on the map, click on the geolocate button <img src = "geolocate.png" alt = "Geolocate button" style="height: auto; width: auto; vertical-align: middle;"> which is located in the top right of your screen!</p>
 </div>
 <script>
+  const closeButton = document.getElementById("close");
+  closeButton.addEventListener("click", () => {
+      const popupDiv = document.querySelector(".popup");
+      if (popupDiv.style.display === "none") {
+          popupDiv.style.display = "block";
+      } else {
+          popupDiv.style.display = "none";
+      }
+  });
+
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYWxmcmVkbzExMTQiLCJhIjoiY2xkNnY3c3EyMHFnODNwcXM3cWhidmtteCJ9.XGod56pNqJJ9KbjtEyLUEA';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        zoom: 12 // starting zoom
+        zoom: 16 // starting zoom
     });
     
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -44,8 +54,40 @@ body { margin: 0; padding: 0; }
         console.log("Heading not available");
       }
 
-      const marker2 = new mapboxgl.Marker({ color: 'black', rotation: 45 })
+    function createPopup(content) {
+      const popup = new mapboxgl.Popup({ closeOnClick: true })
+        .setText(content)
+        return popup;
+    }
+      
+      const broncoStatue = new mapboxgl.Marker({ color: 'black', rotation: 45 })
       .setLngLat([-121.93829475230893, 37.34765047160927])
+      .setPopup(createPopup('Bronco Statue'))
+      .addTo(map);
+
+      const leaveyMarker = new mapboxgl.Marker({ color: 'black', rotation: 45 })
+      .setLngLat([-121.9351385, 37.3491615])
+      .setPopup(createPopup('Leavey Center'))
+      .addTo(map);  
+
+      const mission = new mapboxgl.Marker({ color: 'black', rotation: 45 })
+      .setLngLat([-121.941089285157, 37.349383458418586])
+      .setPopup(createPopup('The Historic Santa Clara Mission Church'))
+      .addTo(map); 
+
+      const scdi = new mapboxgl.Marker({ color: 'black', rotation: 45 })
+      .setLngLat([-121.9386770686103,37.34902493808369])
+      .setPopup(createPopup('Sobrato Campus for Discovery and Innovation'))
+      .addTo(map); 
+
+      const stevens = new mapboxgl.Marker({ color: 'black', rotation: 45 })
+      .setLngLat([-121.93737379571144,37.35041387947771])
+      .setPopup(createPopup('Stevens Stadium'))
+      .addTo(map); 
+
+      const deSaisset = new mapboxgl.Marker({ color: 'black', rotation: 45 })
+      .setLngLat([-121.94061739066143,37.34987418739864])
+      .setPopup(createPopup('de Saisset Museum'))
       .addTo(map);
 
       map.addControl(
@@ -56,7 +98,7 @@ body { margin: 0; padding: 0; }
             // When active the map will receive updates to the device's location as it changes.
             trackUserLocation: true,
             // Draw an arrow next to the location dot to indicate which direction the device is heading.
-            showUserHeading: true
+            showUserHeading: true,
         })
       );  
       
