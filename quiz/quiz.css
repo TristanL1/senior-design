@@ -77,6 +77,12 @@ img {
 
 #results {
   margin: 1rem;
+  font-weight: bold;
+}
+
+#explanation {
+  margin: 1rem;
+  color: black;
   padding-bottom: 5%; /*doesn't overlap with button at the bottom*/
 }
 
