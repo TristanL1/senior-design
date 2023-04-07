@@ -42,10 +42,10 @@ function initImgMarkers() {
             };
         } else if (e.target.getAttribute("id") == "nft-marker3") {
             quiz.onclick = function () {
-                window.location.href="leaveyquiz.html";
+                window.location.href="quiz/leaveyquiz.html";
             };
             info.onclick = function () { 
-                window.location.href="leaveyinfo.html";
+                window.location.href="info/leaveyinfo.html";
             };
         }
     });
