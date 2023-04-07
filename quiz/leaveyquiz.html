@@ -14,8 +14,10 @@
             }
             function wrong() {
                 var text = document.getElementById("results");
+                var image = document.getElementById("correct-image");
                 text.style.color = "red";
                 text.innerHTML = "Not quite, try again!"
+                image.style.display = 'none';
             }
             function check() {
                 var ans = document.getElementById("a3");
