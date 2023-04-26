@@ -3,88 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mayer Theatre Quiz</title>
-    <script>
-        // const cards = document.querySelectorAll('.card')
-        // console.log(cards)
-        // let hasSelectedCard = false;
-        // let lockBoard = false;
-        // let firstCard, secondCard;
-
-        // function selCard() {
-        //     console.log('in selCard');
-        //     if (lockBoard) return;
-        //     if (this === firstCard) return;
-
-        //     this.classList.add('picked');
-
-        //     if (!hasSelectedCard) {
-        //         hasSelectedCard = true;
-        //         firstCard = this;
-        //         return;
-        //     }
-
-        //     secondCard = this;
-
-        //     checkForMatch();
-        // }
-
-        // function checkForMatch() {
-        //     let isMatch = firstCard.dataset.alumni === secondCard.dataset.alumni;
-        //     isMatch ? disableCards() : unselCards();
-        // }
-
-        // function disableCards() {
-        //     firstCard.removeEventListener('click', selCard);
-        //     secondCard.removeEventListener('click', selCard);
-        //     resetBoard();
-        // }
-
-        // function unselCards() {
-        //     lockBoard = true;
-        //     setTimeout(() => {
-        //         firstCard.classList.remove('picked');
-        //         secondCard.classList.remove('picked');
-
-        //         resetBoard();
-        //     }, 1500);
-        // }
-
-        // function resetBoard() {
-        //     [hasSelectedCard, lockBoard] = [false, false];
-        //     [firstCard, secondCard] = [null, null];
-        // }
-
-        // cards.forEach(card => card.addEventListener('click', selCard));
-
-        // function correct() {
-        //     var text = document.getElementById("results");
-        //     var explain = document.getElementById("explanation");
-        //     var image = document.getElementById("correct-image");
-        //     text.style.color = "green";
-        //     text.innerHTML = "Your answer was correct!";
-        //     explain.innerHTML = "As a freshman in 1992 Steve Nash made an immediate impact on the court. He helped the Broncos earn a spot in the NCAA Tournament and led them to a first round upset of the fifth ranked Arizona Wildcats. With Nash at guard the Broncos advanced to the NCAA Tournament three out of his fours seasons. During various points in his career, Nash led the league in assists and free-throw percentage. He is also ranked as one of the top players in NBA league history in three-point shooting, free-throw shooting, total assists, and assists per game. His No.11 jersey was retired by Santa Clara University.";
-        //     image.src = "https://www.scu.edu/media/institutional-pages/news-amp-events/Believe-760x480.jpg"; // Set the image source
-        //     image.style.display = "block"; // Display the image
-        //     image.style.marginLeft = "auto"; // Center the image
-        //     image.style.marginRight = "auto";
-        // }
-        // function wrong() {
-        //     var text = document.getElementById("results");
-        //     var image = document.getElementById("correct-image");
-        //     var explain = document.getElementById("explanation");
-        //     text.style.color = "red";
-        //     text.innerHTML = "Not quite, try again!"
-        //     image.style.display = 'none';
-        //     explain.innerHTML = "";
-        // }
-        // function check() {
-        //     var ans = document.getElementById("a3");
-        //     if (ans.checked)
-        //         correct();
-        //     else
-        //         wrong();
-        // }
-    </script>
     <link rel="stylesheet" href="quiz.css">
     <link rel="stylesheet" href="ar_temp.css">
 </head>
@@ -96,11 +14,6 @@
     </div>
 
     <div class="button-container">
-        <!-- <button class="button" id = "a1" onclick="wrong();">Kawhi Leonard</button>
-            <button class="button" id = "a2" onclick="wrong();">Stephen Curry</button>                
-            <button class="button" id = "a3" onclick="correct();">Steve Nash</button>
-            <button class="button" id = "a4" onclick="wrong();">Jason Kidd</button> -->
-
         <section class="matching-game">
             <section class="bios">
                 <div id="bio-cont" class="card" data-alumni="Faust">
