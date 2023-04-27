@@ -29,7 +29,8 @@ function initImgMarkers() {
         updateTrackingInfo(e.target.getAttribute("data-info-pane"), e.target.getAttribute("data-marker-name"), true);
         var quiz = document.getElementById("quiz");
         var info = document.getElementById("info");
-        
+        var object = document.getElementById("object");
+
         quiz.disabled = false;
         info.disabled = false;
 
@@ -47,6 +48,7 @@ function initImgMarkers() {
             info.onclick = function () { 
                 window.location.href="info/leaveyinfo.html";
             };
+            
         }
     });
     document.addEventListener("markerLost", (e) => {
