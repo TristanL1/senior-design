@@ -1,6 +1,8 @@
 <!DOCTYPE html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mission Church Quiz</title>
+
         <script>
             function correct() {
                 var text = document.getElementById("results");
@@ -8,8 +10,8 @@
                 var image = document.getElementById("correct-image");
                 text.style.color = "green";
                 text.innerHTML = "Your answer was correct!";
-                explain.innerHTML = "As a freshman in 1992 Steve Nash made an immediate impact on the court. He helped the Broncos earn a spot in the NCAA Tournament and led them to a first round upset of the fifth ranked Arizona Wildcats. With Nash at guard the Broncos advanced to the NCAA Tournament three out of his fours seasons. During various points in his career, Nash led the league in assists and free-throw percentage. He is also ranked as one of the top players in NBA league history in three-point shooting, free-throw shooting, total assists, and assists per game. His No.11 jersey was retired by Santa Clara University.";
-                image.src = "https://www.scu.edu/media/institutional-pages/news-amp-events/Believe-760x480.jpg"; // Set the image source
+                explain.innerHTML = "Long before the first Europeans arrived, the South Bay was home to a sizable indigenous population of 10,000 people. They had lived in the Bay Area for tens of thousands of years, separated into up to forty distinct tribes. Thamien, one of these communities, was located where the SCU campus presently sits. Today, descendants refer to themselves as \"Ohlone.\"";
+                image.src = "https://www.scu.edu/media/offices/mission-church/historial-reference-materials/Ohlone-Mural-1-760x662.jpg"; // Set the image source
                 image.style.display = "block"; // Display the image
                 image.style.marginLeft = "auto"; // Center the image
                 image.style.marginRight = "auto";
@@ -31,20 +33,21 @@
                     wrong();
             }
         </script>
+        
         <link rel = "stylesheet" href = "quiz.css">
         <link rel = "stylesheet" href = "ar_temp.css">
     </head>
     <body>
         <div class="title-container">
             <h1>Mission Church Fun Fact Quiz</h1>
-            <h2>Which NBA MVP is an alumni of SCU?</h2>
+            <h2>Which Native American Tribe Owns the Land Where the Mission Church Is Located?</h2>
         </div>
 
         <div class="button-container">
-            <button class="button" id = "a1" onclick="wrong();">Kawhi Leonard</button>
-            <button class="button" id = "a2" onclick="wrong();">Stephen Curry</button>                
-            <button class="button" id = "a3" onclick="correct();">Steve Nash</button>
-            <button class="button" id = "a4" onclick="wrong();">Jason Kidd</button>
+            <button class="button" id = "a1" onclick="wrong();">The Chochenyo</button>
+            <button class="button" id = "a2" onclick="correct();">The Ohlone</button>                
+            <button class="button" id = "a3" onclick="wrong();">The Miwok</button>
+            <button class="button" id = "a4" onclick="wrong();">The Ramaytush</button>
         </div>
 
 
