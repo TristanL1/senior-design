@@ -50,9 +50,9 @@
             </div>
             
             <!-- AR.js core -->
-            <a-scene embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
+            <a-scene id="ar-scene" embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
                 <a-assets>
-                    <a-asset-item id="basketball" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/basketball/scene.gltf"></a-asset-item>
+                    <a-asset-item id="basketball" src="https://TristanL1.github.io/senior-design/assets/basketball/scene.gltf"></a-asset-item>
                 </a-assets>
                 <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
                 <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
@@ -64,5 +64,6 @@
                 
             </a-scene>
         </div>
+        
     </body>
 </html>

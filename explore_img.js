@@ -13,6 +13,12 @@ AFRAME.registerComponent("init-img-markers", {
  * of A-Frame.
  */
 function initImgMarkers() {
+
+    var basketballModel = document.querySelector("#basketball");
+    basketballModel.addEventListener("model-loaded", function() {
+        console.log("Basketball model loaded");
+    });
+
     // Set up the marker url due to a bug in AR.js
     let cwd = window.location.pathname.split("/").slice(0, -1).join("/");  // get the root path
     let markersFolder = cwd + "/markers";  // link to the foler storing image markers
