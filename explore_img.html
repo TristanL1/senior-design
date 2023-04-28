@@ -13,7 +13,6 @@
         <!-- AR.js and A-Frame -->
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
         <!-- For the custom template -->
         <link rel="stylesheet" href="ar_temp.css" />
         <script src="utils.js"></script>
@@ -58,17 +57,16 @@
                 <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
                 <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
                 <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Mouse Test"></a-nft>
-                <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="Leavey Center"></a-nft>
-                <a-marker preset="hiro">
+                <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="Leavey Center">
                     <a-box position="0 0.5 0" material="color: red;">
                         <a-animation attribute="rotation"
                         dur="3000" 
                         to="360 360 0"
                         repeat="indefinite"
                         easing="linear">
-                    </a-animation>
+                        </a-animation>
                     </a-box>
-                </a-marker>
+                </a-nft>
                 <a-entity camera rotation-reader></a-entity> 
             </a-scene> 
                 
