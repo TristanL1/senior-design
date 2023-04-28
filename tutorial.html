@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial | SCU's AR Interactive Tour</title>
+    <style>
+        h1,
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica;
+        }
+
+        button {
+            background-color: #b30738;
+            color: white;
+            padding: 16px 50px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #A00934;
+        }
+
+        #header {
+            background-color: #b30738;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        #text {
+            padding: 15px;
+        }
+
+        #go,
+        #tutorial {
+            display: flex;
+            justify-content: center;
+        }
+
+        #tutorial {
+            margin: 1rem;
+        }
+
+        #tutorial button {
+            padding: 10px 30px;
+            font-size: 20px;
+        }
+        video {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>How to Use Our App</h1>
+    </div>
+    <div id="text">
+        <h2>Getting Started</h2>
+        <p>
+            After clicking the "Start" button either on the home page or here, please allow our app to access your
+            device's camera to scan and learn more about the landmarks on our campus. Once you've hit "Allow" for the
+            camera permissions, the app displays the feed from the camera, and you can then scan different buildings and
+            landmarks on campus. At the bottom of the screen is a section with three buttons. The button with the
+            exclamation mark links to a page displaying information about the building and either notable alums related
+            to it or hours of availability. The button with the question mark links to a more interactive page about
+            learning about the landmark or related alums, which can range from a multiple-choice quiz to a matching game
+            to an image carousel. Finally, the button with the map marker links to a map displaying where you are on
+            campus and what other buildings are near you.
+        </p>
+        <p>
+            Note that the first two buttons mentioned are "greyed out" until you scan a building and the app recognizes
+            it. You'll see that the app recognizes the landmark when the text on the top of the display changes from
+            "Point the camera to a building" to the name of the building your device's camera is pointing to. That way,
+            you can access these pages according to your nearby landmark.
+        </p>
+
+        <video width="400" height="600" controls loop>
+            <source src="app_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="go">
+        <button onclick="window.location.href='explore_img.html'">Start</button>
+    </div>
+    <div id="tutorial">
+        <button onclick="window.location.href='index.html'">Home</button>
+    </div>
+</body>
+
+</html>

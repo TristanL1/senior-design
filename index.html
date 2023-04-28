@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SCU's AR Interactive Tour</title>
+        <title>Home | SCU's AR Interactive Tour</title>
         <style>
             h1, html, body {
                 margin: 0;
                 padding: 0;
+                font-family: Helvetica;
             }
 
             button {
@@ -33,9 +34,16 @@
                 padding: 15px;
             }
 
-            #go {
+            #go, #tutorial {
                 display: flex;
                 justify-content: center;
+            }
+            #tutorial {
+                margin: 1rem;
+            }
+            #tutorial button {
+                padding: 10px 30px;
+                font-size: 20px;
             }
         </style>
     </head>
@@ -69,6 +77,9 @@
 
         <div id="go">
             <button onclick="window.location.href='explore_img.html'">Start</button>
+        </div>
+        <div id="tutorial">
+            <button onclick="window.location.href='tutorial.html'">Tutorial</button>
         </div>
     </body>
 </html>
