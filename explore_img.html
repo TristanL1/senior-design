@@ -50,15 +50,17 @@
             </div>
             
             <!-- AR.js core -->
-            <a-scene id="ar-scene" embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: false" init-img-markers>
-                <a-assets>
-                    <a-asset-item id="basketball" src="https://TristanL1.github.io/senior-design/assets/basketball/scene.gltf"></a-asset-item>
-                </a-assets>
-                <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
+            <a-scene id="ar-scene" embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
                 <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
                 <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Mouse Test"></a-nft>
                 <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="Leavey Center">
-                    <a-text value="Hello, World!"></a-text>
+                    <a-text
+                      value="Hello, AR!"
+                      color="#000000"
+                      position="0 0.5 0"
+                      scale="0.5 0.5 0.5"
+                      align="center"
+                    ></a-text>
                 </a-nft>
                 <a-entity camera rotation-reader></a-entity> 
                 
