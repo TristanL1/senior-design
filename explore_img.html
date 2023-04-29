@@ -14,7 +14,7 @@
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <!-- For the custom template -->
-        <link rel="stylesheet" href="ar_temp.css" />
+        <link rel="stylesheet" href="ar_temp.css"/>
         <script src="utils.js"></script>
         <script src="explore_img.js"></script>
     </head>
@@ -26,6 +26,21 @@
 
         <!-- Fill in the content ABOVE this line -->
         <!-- ========================================================================================== -->
+        <!-- AR.js core -->
+        <a-scene id="ar-scene" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;" init-img-markers>
+            <a-assets>
+                <a-asset-item id="basketball" src="assets/basketball/scene.gltf"></a-asset-item>
+            </a-assets>
+            <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
+            <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
+            <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Mouse Test"></a-nft>
+            <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="Leavey Center">
+                <a-entity gltf-model="#basketball" scale="0.01 0.01 0.01"></a-entity>
+            </a-nft>
+
+            <a-entity camera rotation-reader></a-entity> 
+        </a-scene> 
+        
         <div class="main-page">
         <!-- A simple loader from the sample code-->
             <div class="arjs-loader">
@@ -48,21 +63,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
                     </button>
             </div>
-            
-            <!-- AR.js core -->
-            <a-scene id="ar-scene" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;" init-img-markers>
-                <a-assets>
-                    <a-asset-item id="basketball" src="assets/basketball/scene.gltf"></a-asset-item>
-                </a-assets>
-                <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
-                <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
-                <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Mouse Test"></a-nft>
-                <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="Leavey Center">
-                    <a-entity gltf-model="#basketball" scale="0.01 0.01 0.01"></a-entity>
-                </a-nft>
-
-                <a-entity camera rotation-reader></a-entity> 
-            </a-scene> 
                 
         </div>
         
