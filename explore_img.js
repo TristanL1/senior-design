@@ -31,8 +31,6 @@ function initImgMarkers() {
         var quiz = document.getElementById("quiz");
         var info = document.getElementById("info");
 
-        this.vid = document.querySelector("#vid");
-
         quiz.disabled = false;
         info.disabled = false;
 
@@ -50,7 +48,7 @@ function initImgMarkers() {
             info.onclick = function () { 
                 window.location.href="info/leaveyinfo.html";
             };
-            this.vid.play();
+            
         }
     });
     document.addEventListener("markerLost", (e) => {
@@ -60,7 +58,5 @@ function initImgMarkers() {
         var info = document.getElementById("info");
         quiz.disabled = true;
         info.disabled = true;
-        this.vid.pause();
-		this.vid.currentTime = 0;
     });
 }

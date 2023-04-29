@@ -52,24 +52,15 @@
             <!-- AR.js core -->
             <a-scene id="ar-scene" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;" init-img-markers>
                 <a-assets>
-                    <video src="app_demo.mp4"
-                        preload="auto" id="vid" response-type="arraybuffer" loop
-                        crossorigin webkit-playsinline autoplay muted playsinline>
-                    </video>
+                    <a-asset-item id="basketball" src="assets/basketball/scene.gltf"></a-asset-item>
                 </a-assets>
                 <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
                 <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="University Villas Building 3"></a-nft>
                 <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Mouse Test"></a-nft>
-                <a-nft videohandler type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="Leavey Center">
-                    <a-video
-                        src="#vid"
-                        position='50 150 -100'
-                        rotation='90 0 180'
-                        width='300'
-                        height='175'
-                        >
-                    </a-video>
+                <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="Leavey Center">
+                    <a-entity gltf-model="#basketball" scale="0.01 0.01 0.01"></a-entity>
                 </a-nft>
+
                 <a-entity camera rotation-reader></a-entity> 
             </a-scene> 
                 
