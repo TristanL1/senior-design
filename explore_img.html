@@ -72,7 +72,11 @@
 
             <!-- Building Markers -->
             <a-marker id="leavey" type="pattern" url="patt/basketball.patt">
-                <a-text value="Leavey Center"></a-text>
+                <a-text 
+                    value="Leavey Center"
+                    rotation="-90 0 0"
+                    position="0 1 -1"
+                ></a-text>
                 <a-entity gltf-model="#basketball" scale="0.01 0.01 0.01">
                     <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
                 </a-entity>
