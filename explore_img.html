@@ -25,10 +25,10 @@
                     };
                 } else if(e.target.getAttribute("id") == "museum") {
                     quiz.onclick = function () {
-                        window.location.href="quiz/leaveyquiz.html";
+                        window.location.href="quiz/museumquiz.html";
                     };
                     info.onclick = function () { 
-                        window.location.href="info/leaveyinfo.html";
+                        window.location.href="info/museuminfo.html";
                     };
                 } else if(e.target.getAttribute("id") == "theatre") {
                     quiz.onclick = function () {
@@ -84,6 +84,7 @@
                 ></a-text>
                 <a-entity gltf-model="#basketball" scale="0.01 0.01 0.01">
                     <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                    <a-animation attribute="position" dur="1000" from="0 0 1.5" to="0 0 0" direction="alternate" repeat="indefinite" easing="ease-in-out"></a-animation>
                 </a-entity>
             </a-marker>
             <a-marker id="museum" type="pattern" url="patt/museum.patt">
@@ -124,10 +125,10 @@
                 class="marker-text"
                 value="SCDI"
                 rotation="-90 0 0"
-                position="-0.5 1 -1"
+                position="-0.5 1 -1.5"
                 ></a-text>
-                <a-entity gltf-model="#microscope" scale="0.01 0.01 0.01">
-                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                <a-entity gltf-model="#microscope" scale="0.1 0.1 0.1" rotation="-90 0 0">
+                    <a-animation attribute="position" dur="3000" from="0 0 0" to="0 0 2" direction="alternate" repeat="indefinite" easing="ease-in-out"></a-animation>
                 </a-entity>
             </a-marker>
 
