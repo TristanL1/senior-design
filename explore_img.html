@@ -68,6 +68,10 @@
             <!-- 3D Model Assets -->
             <a-assets>
                 <a-asset-item id="basketball" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/basketball/scene.gltf"></a-asset-item>
+                <a-asset-item id="vase" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/vase/scene.gltf"></a-asset-item>
+                <a-asset-item id="mask" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/mask/scene.gltf"></a-asset-item>
+                <a-asset-item id="cross" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/cross/scene.gltf"></a-asset-item>
+                <a-asset-item id="microscope" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/microscope/scene.gltf"></a-asset-item>
             </a-assets>
 
             <!-- Building Markers -->
@@ -83,16 +87,48 @@
                 </a-entity>
             </a-marker>
             <a-marker id="museum" type="pattern" url="patt/museum.patt">
-                
+                <a-text 
+                class="marker-text"
+                value="De Saisset Museum"
+                rotation="-90 0 0"
+                position="-0.5 1 -1"
+                ></a-text>
+                <a-entity gltf-model="#vase" scale="0.01 0.01 0.01">
+                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
             </a-marker>
             <a-marker id="theatre" type="pattern" url="patt/theatre.patt">
-                
+                <a-text 
+                class="marker-text"
+                value="Mayer Theatre"
+                rotation="-90 0 0"
+                position="-0.5 1 -1"
+                ></a-text>
+                <a-entity gltf-model="#mask" scale="0.01 0.01 0.01">
+                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
             </a-marker>
             <a-marker id="church" type="pattern" url="patt/church.patt">
-                
+                <a-text 
+                class="marker-text"
+                value="Mission Church"
+                rotation="-90 0 0"
+                position="-0.5 1 -1"
+                ></a-text>
+                <a-entity gltf-model="#cross" scale="0.01 0.01 0.01">
+                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
             </a-marker>
             <a-marker id="scdi" type="pattern" url="patt/scdi.patt">
-                
+                <a-text 
+                class="marker-text"
+                value="SCDI"
+                rotation="-90 0 0"
+                position="-0.5 1 -1"
+                ></a-text>
+                <a-entity gltf-model="#microscope" scale="0.01 0.01 0.01">
+                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
             </a-marker>
 
             <a-entity camera></a-entity>
