@@ -114,10 +114,11 @@
                 class="marker-text"
                 value="Mission Church"
                 rotation="-90 0 0"
-                position="-0.5 1 -1"
+                position="-0.5 1 -1.5"
                 ></a-text>
-                <a-entity gltf-model="#cross" scale="0.01 0.01 0.01">
-                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                <a-entity gltf-model="#cross" scale="1.5 1.5 1.5" rotation="90 180 0">
+                    <a-animation attribute="position" dur="5000" from="0 0 1" to="0 0 -1" direction="alternate" repeat="indefinite" easing="ease-in-out"></a-animation>
+                    <!-- <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation> -->
                 </a-entity>
             </a-marker>
             <a-marker id="scdi" type="pattern" url="patt/scdi.patt">
