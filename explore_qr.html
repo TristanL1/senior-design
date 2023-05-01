@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>SCU AR Camera</title>
+
+        <link rel="stylesheet" href="ar_temp.css">
+        
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+        <script src="utils.js"></script>
+        <script>
+            document.addEventListener("markerFound", (e)=>{
+                var quiz = document.getElementById("quiz");
+                var info = document.getElementById("info");
+                quiz.disabled = false;
+                info.disabled = false;
+                if(e.target.getAttribute("id") == "leavey") {
+                    quiz.onclick = function () {
+                        window.location.href="quiz/leaveyquiz.html";
+                    };
+                    info.onclick = function () { 
+                        window.location.href="info/leaveyinfo.html";
+                    };
+                } else if(e.target.getAttribute("id") == "museum") {
+                    quiz.onclick = function () {
+                        window.location.href="quiz/museumquiz.html";
+                    };
+                    info.onclick = function () { 
+                        window.location.href="info/museuminfo.html";
+                    };
+                } else if(e.target.getAttribute("id") == "theatre") {
+                    quiz.onclick = function () {
+                        window.location.href="quiz/theatrequiz.html";
+                    };
+                    info.onclick = function () { 
+                        window.location.href="info/theatreinfo.html";
+                    }; 
+                } else if(e.target.getAttribute("id") == "church") {
+                    quiz.onclick = function () {
+                        window.location.href="quiz/churchquiz.html";
+                    };
+                    info.onclick = function () { 
+                        window.location.href="info/churchinfo.html";
+                    };
+                } else if(e.target.getAttribute("id") == "scdi") {
+                    quiz.onclick = function () {
+                        window.location.href="quiz/scdiquiz.html";
+                    };
+                    info.onclick = function () { 
+                        window.location.href="info/scdiinfo.html";
+                    };
+                }
+            })
+
+            document.addEventListener("markerLost", (e)=>{
+                var quiz = document.getElementById("quiz");
+                var info = document.getElementById("info");
+                quiz.disabled = true;
+                info.disabled = true;
+            })
+        </script>
+    </head>
+    <body style ="margin: 0px; overflow: hidden;">
+         <!-- AR.js Scene -->
+         <a-scene embedded arjs vr-mode-ui="enabled: false">
+            <!-- 3D Model Assets -->
+            <a-assets>
+                <a-asset-item id="basketball" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/basketball/scene.gltf"></a-asset-item>
+                <a-asset-item id="vase" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/vase/scene.gltf"></a-asset-item>
+                <a-asset-item id="mask" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/mask/scene.gltf"></a-asset-item>
+                <a-asset-item id="cross" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/cross/scene.gltf"></a-asset-item>
+                <a-asset-item id="microscope" src="https://raw.githubusercontent.com/TristanL1/senior-design/main/assets/microscope/scene.gltf"></a-asset-item>
+            </a-assets>
+
+            <!-- Building Markers -->
+            <a-marker id="leavey" type="pattern" url="patt/basketball.patt">
+                <a-text 
+                class="marker-text"
+                value="Leavey Center"
+                rotation="-90 0 0"
+                position="-0.5 1 -1"
+                ></a-text>
+                <a-entity gltf-model="#basketball" scale="0.01 0.01 0.01">
+                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                    <a-animation attribute="position" dur="1000" from="0 0 1.5" to="0 0 0" direction="alternate" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-entity>
+            </a-marker>
+            <a-marker id="museum" type="pattern" url="patt/museum.patt">
+                <a-text 
+                class="marker-text"
+                value="De Saisset Museum"
+                rotation="-90 0 0"
+                position="-0.5 1 -1"
+                ></a-text>
+                <a-entity gltf-model="#vase" scale="0.01 0.01 0.01">
+                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+            </a-marker>
+            <a-marker id="theatre" type="pattern" url="patt/theatre.patt">
+                <a-text 
+                class="marker-text"
+                value="Mayer Theatre"
+                rotation="-90 0 0"
+                position="-0.5 1 -1"
+                ></a-text>
+                <a-entity gltf-model="#mask" scale="0.01 0.01 0.01">
+                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+            </a-marker>
+            <a-marker id="church" type="pattern" url="patt/church.patt">
+                <a-text 
+                class="marker-text"
+                value="Mission Church"
+                rotation="-90 0 0"
+                position="-0.5 1 -1.5"
+                ></a-text>
+                <a-entity gltf-model="#cross" scale="1.5 1.5 1.5" rotation="90 180 0">
+                    <a-animation attribute="position" dur="5000" from="0 0 1" to="0 0 -1" direction="alternate" repeat="indefinite" easing="ease-in-out"></a-animation>
+                    <!-- <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation> -->
+                </a-entity>
+            </a-marker>
+            <a-marker id="scdi" type="pattern" url="patt/scdi.patt">
+                <a-text 
+                class="marker-text"
+                value="SCDI"
+                rotation="-90 0 0"
+                position="-0.5 1 -1.5"
+                ></a-text>
+                <a-entity gltf-model="#microscope" scale="0.1 0.1 0.1" rotation="-90 0 0">
+                    <a-animation attribute="position" dur="3000" from="0 0 0" to="0 0 2" direction="alternate" repeat="indefinite" easing="ease-in-out"></a-animation>
+                </a-entity>
+            </a-marker>
+
+            <a-entity camera></a-entity>
+        </a-scene>
+        <div class="main-page">
+            <!-- Bottom Row of Buttons -->
+            <div class="btn-group">
+                <button id="quiz" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </button>
+                <button id="info" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+                <button id="map" onclick = "window.location.href ='./map/map.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
