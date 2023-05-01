@@ -1,11 +1,8 @@
 Model Information:
-* title:	Decorated vase - PG.2808.1142
-* source:	https://sketchfab.com/3d-models/decorated-vase-pg28081142-53b33186c5984e6daf2f83411075fdc9
-* author:	The Royal Museums of Art and History (https://sketchfab.com/kmkg-mrah)
+* title:	Incised-groove Vase Food Vessel
+* source:	https://sketchfab.com/3d-models/incised-groove-vase-food-vessel-f8631ccd9ec640c6bb361fd75f959c43
+* author:	The Hunt Museum (https://sketchfab.com/TheHuntMuseum)
 
 Model License:
-* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
-* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
-
-If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Decorated vase - PG.2808.1142" (https://sketchfab.com/3d-models/decorated-vase-pg28081142-53b33186c5984e6daf2f83411075fdc9) by The Royal Museums of Art and History (https://sketchfab.com/kmkg-mrah) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* license type:	CC0-1.0 (http://creativecommons.org/publicdomain/zero/1.0/)
+* requirements:	Credit is not mandatory. Commercial use is allowed.
