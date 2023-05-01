@@ -77,6 +77,12 @@
     stroke: white;
 }
 
+#qr {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
 /*
 
  Clear floats (clearfix hack) 
