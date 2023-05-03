@@ -23,6 +23,8 @@ function initImgMarkers() {
     $("#nft-marker1").attr("url", markersFolder + "/marker1");
     $("#nft-marker2").attr("url", markersFolder + "/marker2");
     $("#nft-marker3").attr("url", markersFolder + "/marker3");
+    $("#nft-marker4").attr("url", markersFolder + "/marker4");
+    $("#nft-marker5").attr("url", markersFolder + "/marker5");
 
     // Attach listeners to update the HUD info when a marker is detected or lost
     document.addEventListener("markerFound", (e) => {
@@ -36,19 +38,43 @@ function initImgMarkers() {
         info.disabled = false;
         qrcode.disabled = false;
 
-        if (e.target.getAttribute("id") == "nft-marker2") {
+        if (e.target.getAttribute("id") == "nft-marker1") {
             quiz.onclick = function () {
-                window.location.href="mousequiz.html";
+                window.location.href="quiz/churchquiz.html";
             };
             info.onclick = function () { 
-                window.location.href="mouseinfo.html";
+                window.location.href="info/churchinfo.html";
             };
+        } else if (e.target.getAttribute("id") == "nft-marker2") {
+            quiz.onclick = function () {
+                window.location.href="quiz/museumquiz.html";
+            };
+            info.onclick = function () { 
+                window.location.href="info/museuminfo.html";
+            };
+            
         } else if (e.target.getAttribute("id") == "nft-marker3") {
             quiz.onclick = function () {
                 window.location.href="quiz/leaveyquiz.html";
             };
             info.onclick = function () { 
                 window.location.href="info/leaveyinfo.html";
+            };
+            
+        } else if (e.target.getAttribute("id") == "nft-marker4") {
+            quiz.onclick = function () {
+                window.location.href="quiz/theatrequiz.html";
+            };
+            info.onclick = function () { 
+                window.location.href="info/theatreinfo.html";
+            };
+            
+        } else if (e.target.getAttribute("id") == "nft-marker5") {
+            quiz.onclick = function () {
+                window.location.href="quiz/scdiquiz.html";
+            };
+            info.onclick = function () { 
+                window.location.href="info/scdiinfo.html";
             };
             
         }
