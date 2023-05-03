@@ -75,6 +75,7 @@
             </a-assets>
 
             <!-- Building Markers -->
+            <!-- Leavey Center -->
             <a-marker id="leavey" type="pattern" url="patt/basketball.patt">
                 <a-text 
                 class="marker-text"
@@ -87,6 +88,8 @@
                     <a-animation attribute="position" dur="1000" from="0 0 1.5" to="0 0 0" direction="alternate" repeat="indefinite" easing="ease-in-out"></a-animation>
                 </a-entity>
             </a-marker>
+
+            <!-- de Saisset Museum -->
             <a-marker id="museum" type="pattern" url="patt/museum.patt">
                 <a-text 
                 class="marker-text"
@@ -94,10 +97,12 @@
                 rotation="-90 0 0"
                 position="-0.5 1 -1"
                 ></a-text>
-                <a-entity gltf-model="#vase" scale="0.01 0.01 0.01">
-                    <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
+                <a-entity gltf-model="#vase" scale="0.25 0.25 0.25" rotation="-90 0 0" position="0 0 1">
+                    <a-animation attribute="position" dur="2500" from="-1 0 1" to="1 0 1" direction="alternate" repeat="indefinite" easing="ease-in-out"></a-animation>
                 </a-entity>
             </a-marker>
+
+            <!-- Mayer Theatre -->
             <a-marker id="theatre" type="pattern" url="patt/theatre.patt">
                 <a-text 
                 class="marker-text"
@@ -109,6 +114,8 @@
                     <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation>
                 </a-entity>
             </a-marker>
+
+            <!-- Church -->
             <a-marker id="church" type="pattern" url="patt/church.patt">
                 <a-text 
                 class="marker-text"
@@ -121,6 +128,8 @@
                     <!-- <a-animation attribute="rotation" dur="3000" to="360 360 0" repeat="indefinite" easing="linear"></a-animation> -->
                 </a-entity>
             </a-marker>
+
+            <!-- SCDI -->
             <a-marker id="scdi" type="pattern" url="patt/scdi.patt">
                 <a-text 
                 class="marker-text"
