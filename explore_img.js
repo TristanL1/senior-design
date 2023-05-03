@@ -32,11 +32,9 @@ function initImgMarkers() {
         updateTrackingInfo(e.target.getAttribute("data-info-pane"), e.target.getAttribute("data-marker-name"), true);
         var quiz = document.getElementById("quiz");
         var info = document.getElementById("info");
-        var qrcode = document.getElementById("qrcode");
 
         quiz.disabled = false;
         info.disabled = false;
-        qrcode.disabled = false;
 
         if (e.target.getAttribute("id") == "nft-marker1") {
             quiz.onclick = function () {
@@ -84,9 +82,7 @@ function initImgMarkers() {
         updateTrackingInfo(e.target.getAttribute("data-info-pane"), e.target.getAttribute("data-marker-name"), false);
         var quiz = document.getElementById("quiz");
         var info = document.getElementById("info");
-        var qrcode = document.getElementById("qrcode");
         quiz.disabled = true;
         info.disabled = true;
-        qrcode.disabled = true;
     });
 }
