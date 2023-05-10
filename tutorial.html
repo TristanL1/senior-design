@@ -51,9 +51,37 @@
             padding: 10px 30px;
             font-size: 20px;
         }
+
         video {
             display: block;
             margin: 0 auto;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .alumni-img {
+            border: thin #c0c0c0 solid;
+            display: flex;
+            flex-flow: column;
+            padding: 5px;
+            max-width: 220px;
+            margin: auto;
+        }
+
+        .alumni-img img {
+            max-width: 220px;
+        }
+
+        figcaption {
+            background-color: #222;
+            color: #fff;
+            font: italic smaller Helvetica;
+            padding: 3px;
+            text-align: center;
         }
     </style>
 </head>
@@ -68,24 +96,40 @@
             After clicking the "Start" button either on the home page or here, please allow our app to access your
             device's camera to scan and learn more about the landmarks on our campus. Once you've hit "Allow" for the
             camera permissions, the app displays the feed from the camera, and you can then scan different buildings and
-            landmarks on campus. At the bottom of the screen is a section with three buttons. The button with the
-            exclamation mark links to a page displaying information about the building and either notable alums related
-            to it or hours of availability. The button with the question mark links to a more interactive page about
-            learning about the landmark or related alums, which can range from a multiple-choice quiz to a matching game
-            to an image carousel. Finally, the button with the map marker links to a map displaying where you are on
-            campus and what other buildings are near you.
+            landmarks on campus.
+        </p>
+        <img src="./tutorial_assets/allow_cam.png" height="150" class="center">
+        <p>
+            At the bottom of the screen is a section with four buttons. First, the button with the question mark links
+            to a more interactive page about learning about the landmark or related alums, which can range from a
+            multiple-choice quiz to a matching game to an image carousel. Then, the button with the exclamation mark
+            links to a page displaying information about the building and either notable alums related to it or the
+            building's hours of availability. The button with the map marker links to a map displaying where you are on
+            campus and what other buildings are near you. Finally, the rightmost button allows you to switch between
+            scanning buildings and scanning QR codes on these buildings to display AR elements.
         </p>
         <p>
-            Note that the first two buttons mentioned are "greyed out" until you scan a building and the app recognizes
+            Note that the two leftmost buttons are "greyed out" until you scan a building and the app recognizes
             it. You'll see that the app recognizes the landmark when the text on the top of the display changes from
             "Point the camera to a building" to the name of the building your device's camera is pointing to. That way,
             you can access these pages according to your nearby landmark.
         </p>
+        <figure class="alumni-img">
+            <img src="./tutorial_assets/qr_mode.png">
+            <figcaption>Image Scanning Mode buttons, with the rightmost button linking you to QR Scanning Mode</figcaption>
+        </figure>
+        <figure class="alumni-img">
+            <img src="./tutorial_assets/image_mode.png">
+            <figcaption>QR Scanning Mode buttons, with the rightmost button linking you to Image Scanning Mode</figcaption>
+        </figure>
 
-        <video width="400" height="600" controls loop>
-            <source src="app_demo.mp4" type="video/mp4">
+        <br>
+        <h2>Check Out this Video to see a Demo!</h2>
+        <video width="300" height="600" controls loop>
+            <source src="./tutorial_assets/app_demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <br>
     </div>
 
     <div id="go">
