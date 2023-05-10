@@ -5,6 +5,7 @@
     <title>Santa Clara Map</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link rel = "stylesheet" href = "map.css">
+    <link rel="stylesheet" href="../ar_temp.css">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
     <style>
@@ -19,6 +20,18 @@
     <h2>Santa Clara University Map</h2>
     <p>To find yourself on the map, click on the geolocate button <img src = "geolocate.png" alt = "Geolocate button" style="height: auto; width: auto; vertical-align: middle;"> which is located in the top right of your screen!</p>
 </div>
+
+<!-- links map page to QR scanning -->
+<div class="btn-group">
+  <button onclick="window.location.href ='../explore_qr.html'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="#b30738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+  </button>
+</div>
+
 <script>
   const closeButton = document.getElementById("close");
   closeButton.addEventListener("click", () => {
